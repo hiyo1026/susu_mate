@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>すすメイト | はじまりの作戦会議</title>
+    <meta
+      name="description"
+      content="すすメイトは、学生プロジェクトの初回会議をやさしく支える静的Webプロトタイプです。"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="#top" aria-label="すすメイトのトップへ">すすメイト</a>
+      <nav class="site-nav" aria-label="ページ内メニュー">
+        <a href="#recommend">おすすめ</a>
+        <a href="#how-to">使い方</a>
+        <a href="#meeting">作戦会議</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero__content">
+          <p class="eyebrow">はじまりの作戦会議を、少し心強く。</p>
+          <h1>すすメイト</h1>
+          <p class="hero__copy">はじめてのプロジェクトを、ひとりで迷わせない。</p>
+          <p class="hero__text">
+            自己紹介、目的決め、役割分担、次回までのクエスト整理を、一歩ずつ進めるためのWebツールです。
+            ゲームのチュートリアルのように、でも落ち着いて使える雰囲気を目指しています。
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#meeting">はじめる</a>
+            <a class="button button--ghost" href="#how-to">流れを見てみる</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="すすメイトでできること">
+          <span class="hero-card__badge">First Meeting</span>
+          <h2>冒険のしおりまで、6つのステップ</h2>
+          <p>
+            話す順番が見えるだけで、初回会議は少し進めやすくなります。空欄があっても大丈夫です。
+          </p>
+        </aside>
+      </section>
+
+      <section class="section section--soft" id="recommend">
+        <div class="section__header">
+          <p class="eyebrow">こんな人におすすめ</p>
+          <h2>最初の一歩で止まりやすい会議に</h2>
+          <p>
+            まだ慣れていない人がいても、話題をひとつずつ選べるようにしています。
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">01</span>
+            <h3>何を話せばいいかわからない</h3>
+            <p>最初に話すことを小さく分けて、会議の入口を作ります。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">02</span>
+            <h3>役割分担がうまく決まらない</h3>
+            <p>得意なこと、不安なこと、必要そうな役割を見ながら考えられます。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">03</span>
+            <h3>話し合いが苦手</h3>
+            <p>短いヒントを頼りに、思いつく範囲で言葉にできます。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">04</span>
+            <h3>オンラインで参加している</h3>
+            <p>最後にしおりとしてまとめ、チャットや資料に貼りやすくします。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="how-to">
+        <div class="section__header">
+          <p class="eyebrow">使い方</p>
+          <h2>作戦会議の流れを見える形に</h2>
+        </div>
+        <ol class="flow-list">
+          <li>
+            <span>1</span>
+            <div>
+              <h3>なかまを知る</h3>
+              <p>名前、得意なこと、不安なことを共有します。</p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <h3>目的地を決める</h3>
+              <p>何を作るのか、何を達成したいのかをそろえます。</p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <h3>しおりに残す</h3>
+              <p>決まったことをまとめて、次の行動につなげます。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section meeting" id="meeting" aria-labelledby="meeting-title">
+        <div class="section__header">
+          <p class="eyebrow">はじまりの作戦会議</p>
+          <h2 id="meeting-title">一歩ずつ、初回会議を進めよう</h2>
+          <p>
+            全部きれいに埋めなくても大丈夫です。今のチームで話せるところから、しおりに残していきましょう。
+          </p>
+        </div>
+
+        <div class="meeting-layout">
+          <aside class="progress-card" aria-label="ステップの進み具合">
+            <p class="progress-card__label">現在のステップ</p>
+            <ol class="step-list" id="stepList"></ol>
+          </aside>
+
+          <div class="step-card">
+            <div class="step-card__top">
+              <p class="step-count" id="stepCount">Step 1 / 6</p>
+              <h3 id="stepTitle">なかまを知る</h3>
+              <p id="stepDescription"></p>
+              <p class="hint" id="stepHint"></p>
+            </div>
+
+            <form id="meetingForm" class="field-grid"></form>
+
+            <section class="bookmark" id="bookmark" hidden aria-live="polite">
+              <div class="bookmark__header">
+                <div>
+                  <p class="eyebrow">冒険のしおり</p>
+                  <h3>今日の作戦会議メモ</h3>
+                </div>
+                <p class="bookmark__note">空欄は「あとで考える」として残します。</p>
+              </div>
+              <div class="bookmark__content" id="bookmarkContent"></div>
+            </section>
+
+            <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+
+            <div class="step-actions">
+              <button class="button button--ghost" type="button" id="prevButton">ひとつ前へ</button>
+              <button class="button button--primary" type="button" id="nextButton">次のステップへ</button>
+              <button class="button button--primary" type="button" id="copyButton" hidden>
+                しおりをコピーする
+              </button>
+              <button class="button button--danger" type="button" id="resetButton" hidden>
+                はじめから見直す
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>すすメイトは、学生プロジェクトの最初の迷いを減らすための試作ツールです。</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
