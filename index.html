@@ -1,168 +1,271 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>すすメイト | はじまりの作戦会議</title>
-    <meta
-      name="description"
-      content="すすメイトは、学生プロジェクトの初回会議をやさしく支える静的Webプロトタイプです。"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="site-logo" href="#top" aria-label="すすメイトのトップへ">すすメイト</a>
-      <nav class="site-nav" aria-label="ページ内メニュー">
-        <a href="#recommend">おすすめ</a>
-        <a href="#how-to">使い方</a>
-        <a href="#meeting">作戦会議</a>
-      </nav>
-    </header>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>すすメイト｜学生プロジェクトのための進行サポートメディア</title>
+<meta name="description" content="企画立案から進行、メンバーとのやり取りまで。学生プロジェクトの「はじめの一歩」をそっと後押しする学習メディア、すすメイト。">
 
-    <main id="top">
-      <section class="hero section">
-        <div class="hero__content">
-          <p class="eyebrow">はじまりの作戦会議を、少し心強く。</p>
-          <h1>すすメイト</h1>
-          <p class="hero__copy">はじめてのプロジェクトを、ひとりで迷わせない。</p>
-          <p class="hero__text">
-            自己紹介、目的決め、役割分担、次回までのクエスト整理を、一歩ずつ進めるためのWebツールです。
-            ゲームのチュートリアルのように、でも落ち着いて使える雰囲気を目指しています。
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#meeting">はじめる</a>
-            <a class="button button--ghost" href="#how-to">流れを見てみる</a>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="すすメイトでできること">
-          <span class="hero-card__badge">First Meeting</span>
-          <h2>冒険のしおりまで、6つのステップ</h2>
-          <p>
-            話す順番が見えるだけで、初回会議は少し進めやすくなります。空欄があっても大丈夫です。
-          </p>
-        </aside>
-      </section>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
 
-      <section class="section section--soft" id="recommend">
-        <div class="section__header">
-          <p class="eyebrow">こんな人におすすめ</p>
-          <h2>最初の一歩で止まりやすい会議に</h2>
-          <p>
-            まだ慣れていない人がいても、話題をひとつずつ選べるようにしています。
-          </p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true">01</span>
-            <h3>何を話せばいいかわからない</h3>
-            <p>最初に話すことを小さく分けて、会議の入口を作ります。</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true">02</span>
-            <h3>役割分担がうまく決まらない</h3>
-            <p>得意なこと、不安なこと、必要そうな役割を見ながら考えられます。</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true">03</span>
-            <h3>話し合いが苦手</h3>
-            <p>短いヒントを頼りに、思いつく範囲で言葉にできます。</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true">04</span>
-            <h3>オンラインで参加している</h3>
-            <p>最後にしおりとしてまとめ、チャットや資料に貼りやすくします。</p>
-          </article>
-        </div>
-      </section>
+<a href="#main-content" class="skip-link">本文へスキップ</a>
 
-      <section class="section" id="how-to">
-        <div class="section__header">
-          <p class="eyebrow">使い方</p>
-          <h2>作戦会議の流れを見える形に</h2>
-        </div>
-        <ol class="flow-list">
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="すすメイト ホームへ">
+      <svg class="logo-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg>
+      <span>すすメイト</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="メインナビゲーション">
+      <a href="index.html" class="is-current" aria-current="page">ホーム</a>
+      <a href="tools.html">支援ツール</a>
+      <a href="basics.html">ビジネス基礎</a>
+      <a href="articles.html">記事</a>
+      <a href="about.html">制作者について／お問い合わせ</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="stars stars-far"></div>
+      <div class="stars stars-near"></div>
+      <span class="comet comet-a"></span>
+      <span class="comet comet-b"></span>
+      <div class="horizon-glow"></div>
+    </div>
+
+    <div class="hero-inner container">
+      <p class="eyebrow">FOR STUDENT PROJECTS ｜ 学生のためのプロジェクト羅針盤</p>
+      <h1 class="hero-title">さあ、<br>すすメイト。</h1>
+      <p class="hero-sub">企画も、進行も、仲間とのやり取りも。<br class="br-pc">プロジェクトの「はじめの迷い」を、旅の地図に変える学習メディア。</p>
+      <div class="hero-actions">
+        <a href="tools.html#kickoff-roadmap" class="btn btn-primary">キックオフロードマップを見る</a>
+        <a href="articles.html" class="btn btn-outline">記事を見る</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="次のセクションへスクロール">
+      <span class="scroll-cue-line"></span>
+      <span class="scroll-cue-text">SCROLL</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <p class="eyebrow">ABOUT｜これは何？</p>
+        <h2>迷いを、進む力に。</h2>
+        <p class="lead">企画を立ち上げてから進行、メンバーとのやり取りまで。プロジェクトの「はじめの一歩」を、そっと後押しするWebメディアです。</p>
+        <p>難しい専門用語も、大人向けの多機能ツールもいりません。学生がひとりでも、仲間とでも、迷わず使えるシンプルな道具をめざしました。</p>
+
+        <ul class="feature-list">
           <li>
-            <span>1</span>
-            <div>
-              <h3>なかまを知る</h3>
-              <p>名前、得意なこと、不安なことを共有します。</p>
-            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7 L14.2 12 L12 17 L9.8 12 Z" fill="currentColor" stroke="none"/></svg>
+            <span>迷ったときの道しるべ</span>
           </li>
           <li>
-            <span>2</span>
-            <div>
-              <h3>目的地を決める</h3>
-              <p>何を作るのか、何を達成したいのかをそろえます。</p>
-            </div>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18 C 8 10, 16 16, 20 6" stroke-dasharray="1.5 3.2"/><circle cx="4" cy="18" r="1.6" fill="currentColor" stroke="none"/><circle cx="20" cy="6" r="1.6" fill="currentColor" stroke="none"/></svg>
+            <span>進み方が見えるロードマップ</span>
           </li>
           <li>
-            <span>3</span>
-            <div>
-              <h3>しおりに残す</h3>
-              <p>決まったことをまとめて、次の行動につなげます。</p>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9.5l-3.8 3.4v-3.4H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1z"/></svg>
+            <span>話し方・伝え方のヒント</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 400" class="orbit-art">
+          <circle class="orbit-ring" cx="200" cy="200" r="80"/>
+          <circle class="orbit-ring" cx="200" cy="200" r="130"/>
+          <circle class="orbit-ring" cx="200" cy="200" r="180"/>
+          <circle class="orbit-dot orbit-dot-a" cx="280" cy="200" r="6"/>
+          <circle class="orbit-dot orbit-dot-b" cx="200" cy="70" r="4"/>
+          <circle class="orbit-dot orbit-dot-c" cx="60" cy="230" r="3"/>
+          <circle class="orbit-core" cx="200" cy="200" r="22"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEMS ===== -->
+  <section class="section problems" id="problems">
+    <div class="container">
+      <p class="eyebrow center">SIGNALS｜こんな迷い、ありませんか？</p>
+      <h2 class="center">そのモヤモヤ、<br>ひとりで抱えていませんか？</h2>
+
+      <div class="card-grid">
+        <article class="problem-card reveal">
+          <span class="problem-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9.5l-3.8 3.4v-3.4H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1z"/><path d="M12 9.3c0-1 .8-1.6 1.7-1.6.9 0 1.6.6 1.6 1.4 0 .9-.6 1.1-1.2 1.5-.5.3-.7.6-.7 1.1" /><circle cx="12" cy="14.3" r="0.15" fill="currentColor"/></svg>
+          </span>
+          <h3>話すことが決まらない</h3>
+          <p>会議で何を話せばいいのか、議題の立て方から分からない。</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <span class="problem-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3"/><path d="M3.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6"/><circle cx="17" cy="9.5" r="2.2"/><path d="M14.5 20c0-2.6 1.6-4.6 4-4.6" opacity="0.55"/></svg>
+          </span>
+          <h3>仲の深め方がわからない</h3>
+          <p>オンラインだと距離が縮まらず、雑談のきっかけもつかめない。</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <span class="problem-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><line x1="12" y1="18" x2="12" y2="21.5"/><line x1="8.5" y1="21.5" x2="15.5" y2="21.5"/></svg>
+          </span>
+          <h3>喋り出すのが緊張する</h3>
+          <p>話す内容は決まっていても、最初の一言がなかなか出てこない。</p>
+        </article>
+
+        <article class="problem-card reveal">
+          <span class="problem-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="currentColor"/></svg>
+          </span>
+          <h3>役割分担が決まらない</h3>
+          <p>誰が何を担当するのか曖昧で、会議のたびに手が止まる。</p>
+        </article>
+      </div>
+
+      <p class="bridge-line center">その迷い、進み方が見えれば軽くなる。</p>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP (signature) ===== -->
+  <section class="section roadmap" id="roadmap">
+    <div class="container">
+      <p class="eyebrow center">ROUTE MAP｜ロードマップ</p>
+      <h2 class="center">迷いから、見通しへ。</h2>
+      <p class="lead center">プロジェクトの「はじめの一歩」を、4つの通過点でナビゲート。<br class="br-pc">星をたどるように、進み方をたしかめていこう。</p>
+
+      <div class="roadmap-path" id="roadmapPath">
+        <div class="roadmap-track" aria-hidden="true"><div class="roadmap-track-fill" id="roadmapFill"></div></div>
+
+        <ol class="waypoint-list">
+          <li class="waypoint">
+            <span class="waypoint-star" aria-hidden="true"></span>
+            <div class="waypoint-content">
+              <span class="waypoint-num">01</span>
+              <h3>なにをする？</h3>
+              <p>アイデアの見つけ方、企画の立て方から一緒に整理します。</p>
+              <a class="waypoint-link" href="tools.html#project-core">関連ツールを見る <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="waypoint">
+            <span class="waypoint-star" aria-hidden="true"></span>
+            <div class="waypoint-content">
+              <span class="waypoint-num">02</span>
+              <h3>どう進める？</h3>
+              <p>計画の立て方、無理のないスケジュールの組み方を紹介します。</p>
+              <a class="waypoint-link" href="tools.html#gantt-chart">関連ツールを見る <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="waypoint">
+            <span class="waypoint-star" aria-hidden="true"></span>
+            <div class="waypoint-content">
+              <span class="waypoint-num">03</span>
+              <h3>どう伝える？</h3>
+              <p>仲間との距離を縮める、オンラインでのやり取りのコツ。</p>
+              <a class="waypoint-link" href="tools.html#icebreak-gacha">関連ツールを見る <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="waypoint">
+            <span class="waypoint-star" aria-hidden="true"></span>
+            <div class="waypoint-content">
+              <span class="waypoint-num">04</span>
+              <h3>会議を動かす</h3>
+              <p>議題の整理と役割分担で、滞らない会議に変えていきます。</p>
+              <a class="waypoint-link" href="tools.html#meeting-minutes-template">関連ツールを見る <span aria-hidden="true">→</span></a>
             </div>
           </li>
         </ol>
-      </section>
+      </div>
 
-      <section class="section meeting" id="meeting" aria-labelledby="meeting-title">
-        <div class="section__header">
-          <p class="eyebrow">はじまりの作戦会議</p>
-          <h2 id="meeting-title">一歩ずつ、初回会議を進めよう</h2>
-          <p>
-            全部きれいに埋めなくても大丈夫です。今のチームで話せるところから、しおりに残していきましょう。
-          </p>
-        </div>
+      <div class="center">
+        <a href="tools.html#kickoff-roadmap" class="btn btn-outline">キックオフロードマップを確認する</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="meeting-layout">
-          <aside class="progress-card" aria-label="ステップの進み具合">
-            <p class="progress-card__label">現在のステップ</p>
-            <ol class="step-list" id="stepList"></ol>
-          </aside>
+  <!-- ===== ARTICLES ===== -->
+  <section class="section articles" id="articles">
+    <div class="container">
+      <p class="eyebrow center">LOG BOOK｜記事</p>
+      <h2 class="center">旅のヒントを集めた、記事。</h2>
 
-          <div class="step-card">
-            <div class="step-card__top">
-              <p class="step-count" id="stepCount">Step 1 / 6</p>
-              <h3 id="stepTitle">なかまを知る</h3>
-              <p id="stepDescription"></p>
-              <p class="hint" id="stepHint"></p>
-            </div>
+      <div class="card-grid articles-grid">
+        <article class="article-card reveal">
+          <span class="article-tag">会議</span>
+          <h3>チーム運営で大事なこと</h3>
+          <p>役割分担や会議の進め方を、学生プロジェクトの目線で整理します。</p>
+          <a href="articles.html#team-management" class="article-link">記事一覧で見る <span aria-hidden="true">→</span></a>
+        </article>
 
-            <form id="meetingForm" class="field-grid"></form>
+        <article class="article-card reveal">
+          <span class="article-tag">コミュニケーション</span>
+          <h3>起業家へのインタビュー</h3>
+          <p>外部の人の経験から、プロジェクトの始め方や続け方を学びます。</p>
+          <a href="articles.html#entrepreneur-interview" class="article-link">記事一覧で見る <span aria-hidden="true">→</span></a>
+        </article>
 
-            <section class="bookmark" id="bookmark" hidden aria-live="polite">
-              <div class="bookmark__header">
-                <div>
-                  <p class="eyebrow">冒険のしおり</p>
-                  <h3>今日の作戦会議メモ</h3>
-                </div>
-                <p class="bookmark__note">空欄は「あとで考える」として残します。</p>
-              </div>
-              <div class="bookmark__content" id="bookmarkContent"></div>
-            </section>
+        <article class="article-card reveal">
+          <span class="article-tag">はじめの一歩</span>
+          <h3>大事にしていること／制作のきっかけ</h3>
+          <p>すすメイトを作る背景と、学生に届けたい価値をまとめます。</p>
+          <a href="articles.html#values-and-origin" class="article-link">記事一覧で見る <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
 
-            <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+      <div class="center">
+        <a href="articles.html" class="btn btn-outline">すべての記事を見る</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="step-actions">
-              <button class="button button--ghost" type="button" id="prevButton">ひとつ前へ</button>
-              <button class="button button--primary" type="button" id="nextButton">次のステップへ</button>
-              <button class="button button--primary" type="button" id="copyButton" hidden>
-                しおりをコピーする
-              </button>
-              <button class="button button--danger" type="button" id="resetButton" hidden>
-                はじめから見直す
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+  <!-- ===== CLOSING CTA ===== -->
+  <section class="section cta-band">
+    <div class="container center">
+      <h2>さあ、すすメイト。<br>最初の一歩を、いっしょに。</h2>
+      <a href="tools.html#kickoff-roadmap" class="btn btn-primary">キックオフロードマップを始める</a>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-      <p>すすメイトは、学生プロジェクトの最初の迷いを減らすための試作ツールです。</p>
-    </footer>
+</main>
 
-    <script src="js/main.js"></script>
-  </body>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <p class="footer-logo">すすメイト</p>
+      <p class="footer-tagline">進める、すすメイト。</p>
+    </div>
+    <nav class="footer-nav" aria-label="フッターナビゲーション">
+      <a href="index.html">ホーム</a>
+      <a href="tools.html">支援ツール</a>
+      <a href="basics.html">ビジネス基礎</a>
+      <a href="articles.html">記事</a>
+      <a href="about.html">制作者について／お問い合わせ</a>
+    </nav>
+  </div>
+  <p class="footer-fine container">学生プロジェクトの進行をサポートする学習メディア（企画・プロトタイプ）｜ <span id="year"></span> susumate</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
