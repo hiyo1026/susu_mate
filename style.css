@@ -171,17 +171,15 @@ h2 + .lead{ margin-top: 20px; }
 .logo{
   display:flex;
   align-items:center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--star-white);
+  flex: 0 0 auto;
+  width: min(160px, 34vw);
 }
-.logo-star{
-  width: 18px; height:18px;
-  color: var(--accent-dawn);
+.logo-image{
+  width: 100%;
+  height: auto;
+  max-height: 42px;
+  object-fit: contain;
 }
-.logo-star path{ fill: currentColor; stroke:none; }
 
 .main-nav{
   display:flex;
@@ -731,10 +729,15 @@ h2 + .lead{ margin-top: 20px; }
   margin-bottom: 40px;
 }
 .footer-logo{
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--star-white);
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  width: min(176px, 48vw);
+}
+.footer-logo-image{
+  width: 100%;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
 }
 .footer-tagline{
   font-size: 0.85rem;
@@ -798,14 +801,31 @@ h2 + .lead{ margin-top: 20px; }
 }
 
 @media (max-width: 640px){
+  .hero-inner.container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero .eyebrow,
+  .hero-sub{
+    max-width: 260px;
+  }
+  .hero .eyebrow{
+    line-height: 1.8;
+  }
   .card-grid{ grid-template-columns: 1fr; }
   .articles-grid{ grid-template-columns: 1fr; }
   .content-grid,
   .about-detail-grid{ grid-template-columns: 1fr; }
-  .hero-actions{ flex-direction:column; align-items:stretch; width: 100%; }
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    width: min(100%, 260px);
+  }
   .hero-actions .btn{
     width: 100%;
     max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content:center;
     text-align:center;
     white-space: normal;
