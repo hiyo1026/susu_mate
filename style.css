@@ -172,12 +172,12 @@ h2 + .lead{ margin-top: 20px; }
   display:flex;
   align-items:center;
   flex: 0 0 auto;
-  width: min(160px, 34vw);
+  width: min(80px, 18vw);
 }
 .logo-image{
   width: 100%;
   height: auto;
-  max-height: 42px;
+  max-height: 21px;
   object-fit: contain;
 }
 
@@ -731,12 +731,12 @@ h2 + .lead{ margin-top: 20px; }
 .footer-logo{
   display: inline-flex;
   align-items: center;
-  width: min(176px, 48vw);
+  width: min(88px, 24vw);
 }
 .footer-logo-image{
   width: 100%;
   height: auto;
-  max-height: 48px;
+  max-height: 24px;
   object-fit: contain;
 }
 .footer-tagline{
