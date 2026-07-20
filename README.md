@@ -63,7 +63,8 @@ docs/
 ├── RESEARCH.md
 ├── ROADMAP.md
 ├── DESIGN.md
-└── DECISIONS.md
+├── DECISIONS.md
+└── VISION.md
 ```
 
 各資料の役割は次の通りです。
@@ -74,6 +75,7 @@ docs/
 - `docs/ROADMAP.md`：今後の進め方
 - `docs/DESIGN.md`：デザイン方針
 - `docs/DECISIONS.md`：決定事項の記録
+- `docs/VISION.md`：長期構想
 
 ## 作業ルール
 
