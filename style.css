@@ -784,6 +784,23 @@ body[data-page="home"] .use-case-after .use-case-list li::before{
   font-size: 0.94rem;
   margin: 0 0 18px;
 }
+body[data-page="tools"] .icebreak-tool-card-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  color: var(--accent-dawn-soft);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color .25s ease, text-decoration-color .25s ease;
+}
+body[data-page="tools"] .icebreak-tool-card-link:hover{
+  color: var(--star-white);
+  text-decoration-color: currentColor;
+}
 .card-meta{
   color: var(--text-muted);
   font-family: var(--font-mono);
@@ -802,6 +819,77 @@ body[data-page="home"] .use-case-after .use-case-list li::before{
 }
 .next-section{
   background: linear-gradient(180deg, rgba(10,14,39,0), rgba(10,14,39,0.42));
+}
+
+/* --- icebreak gacha prototype --- */
+body[data-page="tools"] .icebreak-tool-section{
+  scroll-margin-top: 92px;
+  background:
+    radial-gradient(56% 90% at 82% 26%, rgba(138,133,211,0.14), transparent 66%),
+    radial-gradient(52% 84% at 16% 78%, rgba(49,162,249,0.10), transparent 70%),
+    linear-gradient(180deg, rgba(16,22,58,0.32), rgba(23,29,72,0.48));
+}
+body[data-page="tools"] .icebreak-tool-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+body[data-page="tools"] .icebreak-tool-intro .lead{
+  margin-top: 20px;
+}
+body[data-page="tools"] .icebreak-note{
+  max-width: 46ch;
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+body[data-page="tools"] .icebreak-machine{
+  min-width: 0;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid rgba(190,225,251,0.18);
+  border-radius: 18px;
+  background:
+    radial-gradient(72% 84% at 84% 8%, rgba(138,133,211,0.16), transparent 68%),
+    rgba(23,29,72,0.88);
+  box-shadow: 0 16px 36px rgba(4,7,26,0.16);
+}
+body[data-page="tools"] .icebreak-result{
+  min-height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(10,14,39,0.36);
+}
+body[data-page="tools"] .icebreak-category{
+  width: fit-content;
+  min-height: 28px;
+  margin-bottom: 18px;
+  padding: 4px 10px;
+  border: 1px solid rgba(49,162,249,0.35);
+  border-radius: 999px;
+  color: var(--accent-dawn-soft);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+body[data-page="tools"] .icebreak-question{
+  color: var(--star-white);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.65;
+}
+body[data-page="tools"] .icebreak-actions{
+  display: flex;
+  margin-top: 24px;
+}
+body[data-page="tools"] .icebreak-actions .btn{
+  justify-content: center;
 }
 .next-grid{
   display:grid;
@@ -1178,6 +1266,7 @@ body[data-page="home"] .outcome-card p{
   .next-grid{ grid-template-columns: 1fr; }
   .use-case-layout{ grid-template-columns: 1fr; }
   .outcome-grid{ grid-template-columns: repeat(2, 1fr); }
+  body[data-page="tools"] .icebreak-tool-layout{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px){
@@ -1226,6 +1315,9 @@ body[data-page="home"] .outcome-card p{
   .outcome-grid{ grid-template-columns: 1fr; }
   .content-grid,
   .about-detail-grid{ grid-template-columns: 1fr; }
+  body[data-page="tools"] .icebreak-machine,
+  body[data-page="tools"] .icebreak-result{ padding: 24px 20px; }
+  body[data-page="tools"] .icebreak-actions .btn{ width: 100%; }
   .hero-actions{
     flex-direction:column;
     align-items:stretch;

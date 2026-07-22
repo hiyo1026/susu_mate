@@ -65,12 +65,13 @@
           <span class="card-status">個別ページ準備中</span>
         </article>
 
-        <article class="content-card reveal" id="icebreak-gacha">
+        <article class="content-card reveal icebreak-tool-card">
           <span class="article-tag">会話づくり</span>
           <h3>アイスブレイクガチャ</h3>
           <p>会議の最初に使える短い質問を出して、話し始めるきっかけを作ります。</p>
           <p class="card-meta">目安：3分</p>
-          <span class="card-status">個別ページ準備中</span>
+          <span class="card-status">試作公開中</span>
+          <a class="icebreak-tool-card-link" href="#icebreak-gacha">使ってみる <span aria-hidden="true">→</span></a>
         </article>
 
         <article class="content-card reveal" id="self-introduction-board">
@@ -120,6 +121,28 @@
           <p class="card-meta">目安：3分</p>
           <span class="card-status">個別ページ準備中</span>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section icebreak-tool-section" id="icebreak-gacha">
+    <div class="container icebreak-tool-layout">
+      <div class="icebreak-tool-intro reveal">
+        <p class="eyebrow">ICEBREAK GACHA｜アイスブレイクガチャ</p>
+        <h2>質問をひとつ引いて、<br>会話を始めよう。</h2>
+        <p class="lead">ボタンを押すと、会議の最初に使える短い質問がランダムで表示されます。メンバー全員で順番に答えてみましょう。</p>
+        <p class="icebreak-note">答えにくい質問はパスして、もう一度引いても大丈夫です。</p>
+        <p class="icebreak-note">回答や履歴は保存されません。</p>
+      </div>
+
+      <div class="icebreak-machine reveal">
+        <div class="icebreak-result" aria-live="polite" aria-atomic="true">
+          <p class="icebreak-category" id="icebreakCategory">QUESTION</p>
+          <p class="icebreak-question" id="icebreakQuestion">ボタンを押すと、ここに質問が表示されます。</p>
+        </div>
+        <div class="icebreak-actions">
+          <button class="btn btn-primary" id="icebreakDrawButton" type="button">質問を引く</button>
+        </div>
       </div>
     </div>
   </section>

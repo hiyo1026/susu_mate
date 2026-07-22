@@ -44,6 +44,49 @@
     });
   }
 
+  /* ---------- icebreak gacha ---------- */
+  const icebreakDrawButton = document.getElementById('icebreakDrawButton');
+  const icebreakQuestion = document.getElementById('icebreakQuestion');
+  const icebreakCategory = document.getElementById('icebreakCategory');
+
+  if (icebreakDrawButton && icebreakQuestion && icebreakCategory) {
+    const icebreakQuestions = [
+      { category: '軽い話題', question: '最近ちょっと嬉しかったことは？' },
+      { category: '軽い話題', question: '今、少し楽しみにしていることは？' },
+      { category: '軽い話題', question: '最近よく見たり聞いたりしているものは？' },
+      { category: '軽い話題', question: '好きな食べ物か飲み物を一つ教えてください。' },
+      { category: '軽い話題', question: '休み時間によくしていることは？' },
+      { category: '軽い話題', question: '今の気分を天気に例えると？' },
+      { category: '好き・得意', question: '最近「面白い」と思ったことは？' },
+      { category: '好き・得意', question: 'やってみたいけれど、まだできていないことは？' },
+      { category: '好き・得意', question: '人に教えられそうなことは？' },
+      { category: '好き・得意', question: 'アイデアを考えることと、形にすることのどちらが好き？' },
+      { category: '好き・得意', question: 'チームで任されたら少し嬉しい役割は？' },
+      { category: '好き・得意', question: '自分が集中しやすい時間帯は？' },
+      { category: 'プロジェクト', question: '今回の活動で少し楽しみなことは？' },
+      { category: 'プロジェクト', question: '今回、挑戦してみたいことは？' },
+      { category: 'プロジェクト', question: 'チームで大事にしたい雰囲気は？' },
+      { category: 'プロジェクト', question: '困ったとき、どんなふうに声をかけてもらえると助かる？' },
+      { category: 'プロジェクト', question: '自分が手伝えそうだと思うことは？' },
+      { category: 'プロジェクト', question: '今日の会議が終わるとき、どうなっていたら嬉しい？' },
+    ];
+    let previousIcebreakQuestion = null;
+
+    icebreakDrawButton.addEventListener('click', () => {
+      let questionIndex = Math.floor(Math.random() * icebreakQuestions.length);
+
+      if (icebreakQuestions.length > 1 && icebreakQuestions[questionIndex].question === previousIcebreakQuestion) {
+        questionIndex = (questionIndex + 1 + Math.floor(Math.random() * (icebreakQuestions.length - 1))) % icebreakQuestions.length;
+      }
+
+      const selectedQuestion = icebreakQuestions[questionIndex];
+      previousIcebreakQuestion = selectedQuestion.question;
+      icebreakCategory.textContent = selectedQuestion.category;
+      icebreakQuestion.textContent = selectedQuestion.question;
+      icebreakDrawButton.textContent = 'もう一度引く';
+    });
+  }
+
   /* ---------- prefers-reduced-motion ---------- */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
